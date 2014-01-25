@@ -1,7 +1,7 @@
-= simple_form_for @character do |f|
-  = f.input :name
-  = f.input :st
-  = f.input :dx
-  = f.input :iq
-  = f.input :ht
+= simple_form_for @character, html: { class: 'form-horizontal' } do |f|
+  = f.input :name, :input_html => { :class => "span3" }
+  = f.input :st, :input_html => { :class => "span3" }
+  = f.input :dx, :input_html => { :class => "span3" }
+  = f.input :iq, :input_html => { :class => "span3" }
+  = f.input :ht, :input_html => { :class => "span3" }
   = f.button :submit

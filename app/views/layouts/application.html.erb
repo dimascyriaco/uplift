@@ -1,14 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <title>Uplift</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
+<header class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">Uplift</a>
+      <ul class="nav">
+        <li><%= link_to 'Home', root_path %></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle='dropdown'>
+            Characters
+            <b class='caret'></b>
+          </a>
+          <ul class="dropdown-menu">
+            <li><%= link_to 'List all characters', characters_path %></li>
+            <li><%= link_to 'New character', new_character_path %></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
 
-<%= yield %>
+<div class="container master-container">
+  <% if notice %>
+    <div class="alert alert-success fade in" data-alert="alert">
+      <a class="close" data-dismiss='alert' href="#">×</a>
+      <p><%= notice %></p>
+    </div>
+  <% end %>
 
+  <%= yield %>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p>Copyright 2013-2014 <a href="http://dimascyriaco.com.br">Dimas Cyriaco </a></p>
+
+    <ul class="footer-links">
+      <li><a href="https://github.com/dimascyriaco">Dimas Cyriaco @ GitHub</a></li>
+    </ul>
+  </div>
+</footer>
+
+<%= javascript_include_tag 'application' %>
 </body>
 </html>
