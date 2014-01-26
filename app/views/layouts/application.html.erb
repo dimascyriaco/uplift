@@ -8,24 +8,36 @@
 </head>
 
 <body>
-<header class="navbar navbar-inverse navbar-fixed-top">
-  <div class="navbar-inner">
-    <div class="container">
-      <a class="brand" href="#">Uplift</a>
-      <ul class="nav">
-        <li><%= link_to 'Home', root_path %></li>
-        <li class="dropdown">
+<header class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <%= link_to 'Uplift', root_path, class: 'navbar-brand' %>
+    </div>
+
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li class="active dropdown">
           <a href="#" class="dropdown-toggle" data-toggle='dropdown'>
             Characters
             <b class='caret'></b>
           </a>
+
           <ul class="dropdown-menu">
             <li><%= link_to 'List all characters', characters_path %></li>
             <li><%= link_to 'New character', new_character_path %></li>
           </ul>
         </li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
-    </div>
+    </div><!--/.nav-collapse -->
   </div>
 </header>
 
