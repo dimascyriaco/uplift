@@ -1,6 +1,6 @@
 class CharactersController < ApplicationController
   def show
-    @character = CharacterDatum.find(params[:id])
+    @character = Character.find(params[:id])
   end
 
   def new
@@ -8,7 +8,7 @@ class CharactersController < ApplicationController
   end
 
   def create
-    character = CharacterDatum.create!(character_params)
+    character = Character.create!(character_params)
     redirect_to character_path(character)
   end
 

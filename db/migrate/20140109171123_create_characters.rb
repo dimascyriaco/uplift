@@ -1,6 +1,6 @@
-class CreateCharacterData < ActiveRecord::Migration
+class CreateCharacters < ActiveRecord::Migration
   def change
-    create_table :character_data do |t|
+    create_table :characters do |t|
       t.string :name
       t.integer :st
       t.integer :dx
