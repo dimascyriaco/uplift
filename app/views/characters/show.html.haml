@@ -1,3 +1,6 @@
-%h1 Character Detail
+.row
+  .col-md-2
+    = render :partial => 'form'
 
-%h2.name= @character.name
+  .col-md-10
+    %h3.name= @character.name

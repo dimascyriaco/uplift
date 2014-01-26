@@ -1,0 +1,9 @@
+.row
+  %nav.navbar.navbar-default{role: 'navigation'}
+    = simple_form_for @character, html: { class: 'navbar-form navbar-left' } do |f|
+      = f.input :name, :input_html => { :class => 'span3' }
+      = f.input :st, :input_html => { :class => 'span3' }
+      = f.input :dx, :input_html => { :class => 'span3' }
+      = f.input :iq, :input_html => { :class => 'span3' }
+      = f.input :ht, :input_html => { :class => 'span3' }
+      = f.button :submit unless @character.persisted?
