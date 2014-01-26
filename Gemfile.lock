@@ -1,6 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    abilitude (0.0.2)
     actionmailer (4.1.0.beta1)
       actionpack (= 4.1.0.beta1)
       actionview (= 4.1.0.beta1)
@@ -50,6 +51,8 @@ GEM
     erubis (2.7.0)
     eventmachine (1.0.3)
     execjs (2.0.2)
+    gurps (0.0.1)
+      abilitude (= 0.0.2)
     haml (4.0.5)
       tilt
     haml-rails (0.5.3)
@@ -181,6 +184,7 @@ PLATFORMS
 DEPENDENCIES
   capybara
   coffee-rails (~> 4.0.0)
+  gurps
   haml-rails
   jbuilder (~> 1.2)
   jquery-rails

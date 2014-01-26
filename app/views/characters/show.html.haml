@@ -3,4 +3,6 @@
     = render :partial => 'form'
 
   .col-md-10
-    %h3.name= @character.name
+    - gurps_attributes.each do |field|
+      .field
+        = "#{field.humanize}: #{@gurps_character.public_send(field)}"
