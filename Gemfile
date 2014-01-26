@@ -7,7 +7,7 @@ gem 'haml-rails'
 gem 'jbuilder', '~> 1.2'
 gem 'jquery-rails'
 gem 'pg'
-#gem 'sass-rails', '~> 4.0.0.rc1'
+gem 'sass-rails', '~> 4.0.0.rc1'
 gem 'sdoc',          group: :doc, require: false
 gem 'simple_form'
 gem 'therubyracer',  platforms: :ruby
@@ -17,6 +17,7 @@ gem 'uglifier', '>= 1.3.0'
 group :development, :test do
   gem 'capybara'
   gem 'pry'
+  gem 'simplecov'
 end
 
 group :development do
